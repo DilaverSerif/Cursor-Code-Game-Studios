@@ -1,0 +1,17 @@
+---
+description: Studio agent hierarchy and delegation rules
+alwaysApply: true
+---
+
+# Agent Coordination
+
+- Vertical delegation: directors → department leads → specialists. Do not skip a tier for complex decisions.
+- Same-tier agents may consult; they must not make binding decisions outside their domain.
+- Conflicts escalate to the shared parent, or to `creative-director` (design) / `technical-director` (tech).
+- Cross-domain design changes are coordinated by `producer`.
+- Never modify files outside the agent's directories without explicit delegation.
+- Independent Task calls should be issued in parallel; surface BLOCKED agents immediately.
+- Directors should use a high-capability model when the user requests one; otherwise inherit.
+
+Roster: `docs/studio/agent-roster.md`
+Full rules: `docs/studio/coordination-rules.md`

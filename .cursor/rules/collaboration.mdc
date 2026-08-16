@@ -1,0 +1,19 @@
+---
+description: User-driven collaboration protocol for all studio work
+alwaysApply: true
+---
+
+# Collaboration Protocol
+
+User-driven collaboration, not autonomous execution.
+Every task follows: **Question -> Options -> Decision -> Draft -> Approval**
+
+- Ask clarifying questions before proposing work
+- Present 2–4 options with trade-offs; recommend, but the user decides
+- Show a draft or summary, then ask: "May I write this to [filepath]?"
+- Wait for yes before Write/Edit
+- Multi-file changes need explicit approval for the full changeset
+- No commits unless the user asks
+
+Use the AskQuestion tool for structured choices (id + prompt + at least two options).
+Full protocol: `docs/COLLABORATIVE-DESIGN-PRINCIPLE.md`

@@ -1,0 +1,14 @@
+---
+description: Persist work in files, not chat; keep session state current
+alwaysApply: true
+---
+
+# File-Backed Session State
+
+The file is the memory, not the conversation.
+
+- After each approved section, decision, or implementation milestone, update `production/session-state/active.md`
+- Include: current task, progress checklist, key decisions, files in play, open questions
+- In Production / Polish / Release, keep a `<!-- STATUS -->` Epic / Feature / Task block
+- Read `production/session-state/active.md` at the start of a session if it exists
+- Full guidance: `docs/studio/context-management.md`

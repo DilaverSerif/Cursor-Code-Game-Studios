@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [
+      {
+        "command": ".cursor/hooks/session-start.sh",
+        "timeout": 10
+      },
+      {
+        "command": ".cursor/hooks/detect-gaps.sh",
+        "timeout": 10
+      }
+    ],
+    "beforeShellExecution": [
+      {
+        "command": ".cursor/hooks/validate-commit.sh",
+        "timeout": 15,
+        "matcher": "git commit"
+      },
+      {
+        "command": ".cursor/hooks/validate-push.sh",
+        "timeout": 10,
+        "matcher": "git push"
+      }
+    ],
+    "afterFileEdit": [
+      {
+        "command": ".cursor/hooks/validate-assets.sh",
+        "timeout": 10
+      },
+      {
+        "command": ".cursor/hooks/validate-skill-change.sh",
+        "timeout": 5
+      }
+    ],
+    "subagentStart": [
+      {
+        "command": ".cursor/hooks/log-agent.sh",
+        "timeout": 5
+      }
+    ],
+    "subagentStop": [
+      {
+        "command": ".cursor/hooks/log-agent-stop.sh",
+        "timeout": 5
+      }
+    ],
+    "preCompact": [
+      {
+        "command": ".cursor/hooks/pre-compact.sh",
+        "timeout": 10
+      }
+    ],
+    "sessionEnd": [
+      {
+        "command": ".cursor/hooks/session-stop.sh",
+        "timeout": 10
+      }
+    ],
+    "stop": [
+      {
+        "command": ".cursor/hooks/session-stop.sh",
+        "timeout": 10
+      }
+    ]
+  }
+}

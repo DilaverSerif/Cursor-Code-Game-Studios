@@ -1,7 +1,24 @@
-# Upgrading Claude Code Game Studios
+# Upgrading Cursor Code Game Studios
 
 This guide covers upgrading your existing game project repo from one version
 of the template to the next.
+
+## Claude layout → Cursor layout
+
+If your project still has `.claude/` and `CLAUDE.md`, this repo is now
+Cursor-native. Migrate as follows:
+
+1. Move studio docs from `.claude/docs/` to `docs/studio/`
+2. Move skills to `.cursor/skills/<name>/SKILL.md` (frontmatter: `name`, `description` only)
+3. Move agents to `.cursor/agents/<name>.md` (`model: inherit`)
+4. Convert rules to `.cursor/rules/*.mdc` with `globs:` (not `paths:`)
+5. Replace Claude hooks in `.claude/settings.json` with `.cursor/hooks.json`
+6. Replace `CLAUDE.md` with `AGENTS.md`
+7. Replace `AskUserQuestion` with the Cursor `AskQuestion` tool
+8. Delete `.claude/` so Cursor does not load duplicate skills/agents
+
+Historical sections below describe older Claude Code template versions and
+are kept as an archive.
 
 **Find your current version** in your git log:
 ```bash
